@@ -1,26 +1,26 @@
+import imgExecutivo from '../assets/images/collection_executivo.png';
+import imgCasamento from '../assets/images/collection_casamento.png';
+import imgEsporte from '../assets/images/collection_esporte.png';
 import './Collection.css';
 
 const Collection = () => {
-  // TODO: Substituir 'collection.png' por imagens únicas para cada categoria.
-  // As 3 cards atualmente exibem a mesma foto, o que prejudica a credibilidade.
-  // Sugestão de arquivos: /images/collection_executivo.png, /images/collection_casamento.png, /images/collection_esporte.png
   const items = [
     {
       title: 'Ternos Executivos',
       desc: 'Poder e confiança para o ambiente corporativo.',
-      img: '/images/collection.png', // TODO: imagem específica
+      img: imgExecutivo,
       alt: 'Terno executivo sob medida em lã italiana — Alfaiataria Bespoke'
     },
     {
       title: 'Casamentos',
       desc: 'O traje perfeito para o dia mais importante da sua vida.',
-      img: '/images/collection.png', // TODO: imagem específica
+      img: imgCasamento,
       alt: 'Traje de casamento bespoke com colete e gravata — Alfaiataria Bespoke'
     },
     {
       title: 'Esporte Fino',
       desc: 'Elegância casual para eventos descontraídos.',
-      img: '/images/collection.png', // TODO: imagem específica
+      img: imgEsporte,
       alt: 'Look esporte fino com blazer sob medida — Alfaiataria Bespoke'
     }
   ];

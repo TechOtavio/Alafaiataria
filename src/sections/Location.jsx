@@ -1,3 +1,4 @@
+import locationImg from '../assets/images/location.png';
 import { MapPin, Clock, Phone } from 'lucide-react';
 import './Location.css';
 
@@ -43,7 +44,7 @@ const Location = () => {
           
           <div className="location-image fade-up" style={{ transitionDelay: '0.2s' }}>
             <img
-              src="/images/location.png"
+              src={locationImg}
               alt="Fachada da Alfaiataria Bespoke — Jardins, São Paulo"
               loading="lazy"
               width="800"

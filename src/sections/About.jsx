@@ -1,3 +1,4 @@
+import aboutImg from '../assets/images/about.png';
 import { useEffect, useRef, useState } from 'react';
 import './About.css';
 
@@ -37,7 +38,7 @@ const About = () => {
         <div className="about-grid">
           <div className="about-image fade-up">
             <img
-              src="/images/about.png"
+              src={aboutImg}
               alt="Interior do ateliê da Alfaiataria Bespoke em São Paulo"
               loading="lazy"
               width="800"

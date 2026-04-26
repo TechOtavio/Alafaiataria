@@ -1,3 +1,4 @@
+import trendImg from '../assets/images/trend_modern.png';
 import './Trends.css';
 
 const Trends = () => {
@@ -20,7 +21,7 @@ const Trends = () => {
             <a href="#contato" className="btn-secondary trends-cta">Consultoria de Estilo</a>
           </div>
           <div className="trends-image fade-up" style={{ transitionDelay: '0.2s' }}>
-            <img src="/images/trend.png" alt="Tendências de Alfaiataria" />
+            <img src={trendImg} alt="Tendências Modernas de Alfaiataria" />
             <div className="trends-badge">
               <span>Nova</span>
               <strong>Coleção</strong>

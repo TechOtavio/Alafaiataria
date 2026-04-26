@@ -1,3 +1,7 @@
+import imgFull from '../assets/images/lookbook_full.png';
+import imgDetail1 from '../assets/images/lookbook_detail_1.png';
+import imgDetail2 from '../assets/images/lookbook_detail_2.png';
+import imgCasual from '../assets/images/lookbook_casual.png';
 import { useState } from 'react';
 import './Lookbook.css';
 
@@ -7,23 +11,23 @@ const Lookbook = () => {
   // Cada item tem uma classe CSS que define o grid-area no layout Masonry
   const images = [
     {
-      src: '/images/lookbook.png',
-      alt: 'Lookbook: Terno azul marinho com lapela notch — Alfaiataria Bespoke',
-      layout: 'featured' // col-span 2, row-span 2
+      src: imgFull,
+      alt: 'Lookbook: Terno azul marinho completo — Alfaiataria Bespoke',
+      layout: 'featured'
     },
     {
-      src: '/images/collection.png',
-      alt: 'Lookbook: Terno executivo cinza chumbo com gravata — Alfaiataria Bespoke',
+      src: imgDetail1,
+      alt: 'Lookbook: Detalhe das mãos do alfaiate — Excelência e Tradição',
       layout: 'small'
     },
     {
-      src: '/images/trend.png',
-      alt: 'Lookbook: Look esporte fino com blazer xadrez — Alfaiataria Bespoke',
-      layout: 'tall' // row-span 2
+      src: imgDetail2,
+      alt: 'Lookbook: Detalhe de lapela com pin dourado — Acabamento Premium',
+      layout: 'tall'
     },
     {
-      src: '/images/hero_bg.png',
-      alt: 'Lookbook: Detalhe de tecido lã italiana Super 150s — Alfaiataria Bespoke',
+      src: imgCasual,
+      alt: 'Lookbook: Estilo Casual Chic em Linho — Conforto e Elegância',
       layout: 'small'
     }
   ];
