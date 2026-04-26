@@ -51,24 +51,6 @@ npm run dev
 npm run build
 ```
 
----
-
-## 📋 Checklist de Pré-Lançamento (Importante!)
-
-Para garantir que o site funcione perfeitamente em produção, substitua as informações fictícias nos seguintes arquivos:
-
-### ✉️ Contato e Conversão
-- [ ] **WhatsApp:** No arquivo `src/components/WhatsApp.jsx` (linha 6), insira o número real.
-- [ ] **Formulário:** Em `src/sections/Contact.jsx` (linha 5), coloque seu ID do Formspree.
-- [ ] **E-mail/Telefone:** Em `src/sections/Location.jsx` (linha 33) e no `Footer.jsx`.
-
-### 🌍 SEO e Social Media
-- [ ] **Canonical Link:** No `index.html` (linha 22), troque pela sua URL do Vercel.
-- [ ] **OG Image:** No `index.html` (linha 31), coloque a URL absoluta da imagem de preview.
-- [ ] **Manifest:** Atualize o `public/manifest.json` com o domínio final.
-
----
-
 ## 💎 Diferenciais Técnicos
 
 - **Performance LCP:** Imagem da Hero pré-carregada via `link rel="preload"`.
