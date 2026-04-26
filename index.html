@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ================================================
+         TODO (ANTES DO DEPLOY):
+         Substitua TODAS as ocorrências de SEU_DOMINIO.vercel.app
+         pela URL real do seu deploy no Vercel.
+         Exemplo: meu-site.vercel.app ou alfaiatariabespoke.com.br
+         ================================================ -->
+
+    <!-- ======================== Primary SEO ======================== -->
+    <title>Alfaiataria Bespoke | Ternos Sob Medida em São Paulo</title>
+    <meta name="description" content="Alfaiataria Bespoke — Ternos e trajes masculinos sob medida em São Paulo. Tradição, exclusividade e precisão em cada corte. Agende sua consulta privada." />
+    <meta name="keywords" content="alfaiataria, terno sob medida, bespoke, alfaiate, ternos masculinos, São Paulo, Jardins, casamento, terno executivo, alfaiataria premium" />
+    <meta name="author" content="Alfaiataria Bespoke" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <link rel="canonical" href="https://SEU_DOMINIO.vercel.app/" />
+
+    <!-- ======================== Open Graph (WhatsApp · Facebook · LinkedIn · Telegram) ======================== -->
+    <!-- A imagem og-image.png é dedicada ao compartilhamento: formato 1200×630 (padrão OG) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://SEU_DOMINIO.vercel.app/" />
+    <meta property="og:site_name" content="Alfaiataria Bespoke" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Alfaiataria Bespoke | Ternos Sob Medida em São Paulo" />
+    <meta property="og:description" content="A arte da elegância sob medida. Ternos e trajes masculinos exclusivos com os melhores tecidos do mundo. Agende sua experiência privada." />
+    <meta property="og:image" content="https://SEU_DOMINIO.vercel.app/og-image.png" />
+    <meta property="og:image:secure_url" content="https://SEU_DOMINIO.vercel.app/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Terno azul marinho bespoke com lenço dourado — Alfaiataria Bespoke, São Paulo" />
+
+    <!-- ======================== Twitter / X Card ======================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@alfaiatariabespoke" />
+    <meta name="twitter:title" content="Alfaiataria Bespoke | Ternos Sob Medida em São Paulo" />
+    <meta name="twitter:description" content="A arte da elegância sob medida. Ternos e trajes masculinos exclusivos com os melhores tecidos do mundo. Agende sua experiência privada." />
+    <meta name="twitter:image" content="https://SEU_DOMINIO.vercel.app/og-image.png" />
+    <meta name="twitter:image:alt" content="Terno azul marinho bespoke com lenço dourado — Alfaiataria Bespoke, São Paulo" />
+
+    <!-- ======================== JSON-LD — LocalBusiness Schema ======================== -->
+    <!-- Permite ao Google exibir rich snippets: endereço, horário e telefone nos resultados -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ClothingStore",
+      "name": "Alfaiataria Bespoke",
+      "description": "Alfaiataria masculina de alto padrão em São Paulo. Ternos e trajes bespoke sob medida com os melhores tecidos do mundo.",
+      "url": "https://SEU_DOMINIO.vercel.app/",
+      "image": "https://SEU_DOMINIO.vercel.app/og-image.png",
+      "logo": "https://SEU_DOMINIO.vercel.app/Logo.png",
+      "telephone": "+55-11-99999-9999",
+      "email": "contato@alfaiatariabespoke.com.br",
+      "priceRange": "$$$",
+      "currenciesAccepted": "BRL",
+      "paymentAccepted": "Cash, Credit Card, Pix",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. da Elegância, 1234",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01310-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.561684,
+        "longitude": -46.655981
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "10:00",
+          "closes": "15:00"
+        }
+      ],
+      "sameAs": [
+        "https://instagram.com/alfaiatariabespoke",
+        "https://facebook.com/alfaiatariabespoke"
+      ]
+    }
+    </script>
+
+    <!-- ======================== Performance ======================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- LCP Optimization: preload da imagem hero -->
+    <link rel="preload" as="image" href="/images/hero_bg.png" />
+
+    <!-- ======================== Favicon & Theme ======================== -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/Logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0a111a" />
+    <meta name="msapplication-TileColor" content="#0a111a" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,94 @@
+.about-section {
+  background-color: var(--bg-secondary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-image {
+  overflow: hidden;
+  position: relative;
+  /* Trava a proporção do container independente da imagem original.
+     3/4 = formato retrato clássico de alfaiataria (elegante, vertical). */
+  aspect-ratio: 3 / 4;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  /* Cover preenche o container mantendo proporção real da foto (sem esticar) */
+  object-fit: cover;
+  /* Foca no centro-topo: garante que o rosto/torso do alfaiate sempre aparece */
+  object-position: center top;
+  border-radius: var(--border-radius-sm);
+}
+
+.about-experience {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--accent-gold);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-experience .years {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.about-experience .label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+
+.about-content {
+  padding-left: 2rem;
+}
+
+.about-text {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: var(--text-base);
+  line-height: 1.8;
+}
+
+.signature {
+  margin-top: 3rem;
+  font-family: var(--font-signature);
+  font-size: var(--text-4xl);
+  color: var(--accent-gold);
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .about-experience {
+    top: auto;
+    bottom: -30px;
+    right: 20px;
+  }
+  
+  .about-content {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+}

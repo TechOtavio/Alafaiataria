@@ -1,0 +1,321 @@
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-section) 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.contact-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/contact_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.contact-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(var(--bg-primary-rgb), 0.8) 0%,
+    rgba(var(--bg-primary-rgb), 0.6) 100%
+  );
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-glass-card {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(var(--bg-secondary-rgb), 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(var(--accent-gold-rgb), 0.2);
+  padding: 5rem 4rem;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.contact-header {
+  margin-bottom: 4rem;
+}
+
+.contact-subtitle {
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  margin-bottom: 1rem;
+}
+
+.contact-title {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  margin-bottom: 1.5rem;
+}
+
+.contact-desc {
+  color: var(--text-secondary);
+  font-size: var(--text-base);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.minimal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.form-row-minimal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+/* Select precisa de mais espaço superior pois o label fixo ocupa -1.5rem acima */
+.select-group {
+  padding-top: 2rem;
+  margin-top: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(var(--text-primary-rgb), 0.2);
+  padding: 0.5rem 0;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+/* Select com visual premium: borda completa + glassmorphism + seta SVG custom */
+.input-group select {
+  width: 100%;
+  background: rgba(var(--bg-tertiary-rgb), 0.4);
+  border: 1px solid rgba(var(--accent-gold-rgb), 0.25);
+  border-radius: var(--border-radius-sm);
+  padding: 0.9rem 3rem 0.9rem 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  backdrop-filter: blur(8px);
+  letter-spacing: 0.5px;
+}
+
+.input-group select:hover {
+  border-color: rgba(var(--accent-gold-rgb), 0.5);
+  background: rgba(var(--bg-tertiary-rgb), 0.6);
+}
+
+.input-group select:focus {
+  border-color: var(--accent-gold);
+  background: rgba(var(--bg-tertiary-rgb), 0.7);
+  box-shadow: 0 0 0 3px rgba(var(--accent-gold-rgb), 0.08);
+}
+
+.input-group select option {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 0.5rem;
+}
+
+.input-group label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  color: rgba(var(--text-primary-rgb), 0.5);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Chevron SVG customizado para o select — mais refinado que o ▼ Unicode */
+.select-group::after {
+  content: '';
+  position: absolute;
+  /* Alinhado verticalmente ao centro do select (considerando o padding-top do select-group) */
+  bottom: 1rem;
+  right: 1rem;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  transition: transform var(--transition-fast);
+}
+
+.select-group:focus-within::after {
+  transform: rotate(180deg);
+}
+
+/* Label do select: posicionado acima do campo com estilo gold */
+.select-label {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  font-size: var(--text-xs) !important;
+  color: var(--accent-gold) !important;
+  font-family: var(--font-body) !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  pointer-events: none;
+}
+
+/* Floating Label Animation */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+  top: -1.5rem;
+  font-size: var(--text-xs);
+  color: var(--accent-gold);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input-group input:focus {
+  border-bottom: 1px solid var(--accent-gold);
+}
+
+.btn-elegant {
+  margin-top: 2rem;
+  background: transparent;
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-elegant span {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  letter-spacing: 4px;
+}
+
+.btn-elegant::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--accent-gold);
+  transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+}
+
+.btn-elegant:hover::before {
+  width: 100%;
+}
+
+.btn-elegant:hover span {
+  color: var(--bg-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .contact-background {
+    background-attachment: scroll;
+  }
+
+  .contact-glass-card {
+    padding: 3rem 2rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .form-row-minimal {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Success State */
+.contact-success {
+  text-align: center;
+  padding: 2rem 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  color: var(--accent-gold);
+}
+
+.success-icon svg {
+  width: 100%;
+  height: 100%;
+  animation: drawCheck 0.8s ease forwards;
+}
+
+@keyframes drawCheck {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.contact-error {
+  color: #e57373;
+  font-size: var(--text-sm);
+  text-align: center;
+  border: 1px solid rgba(229, 115, 115, 0.3);
+  padding: 0.8rem;
+}
+
+.btn-elegant:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}

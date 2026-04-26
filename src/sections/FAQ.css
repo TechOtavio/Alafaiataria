@@ -1,0 +1,66 @@
+.faq-section {
+  background-color: var(--bg-secondary);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(var(--text-primary-rgb), 0.1);
+  padding: 1.5rem 0;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.faq-item:hover .faq-question h3 {
+  color: var(--accent-gold);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+  padding-right: 2rem;
+}
+
+.faq-icon {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+  transition: transform var(--transition-normal);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer-container {
+  display: grid;
+  /* grid-template-rows é animável, ao contrário de height: auto.
+     Troca entre '0fr' (fechado) e '1fr' (aberto) via inline style no JSX. */
+  transition: grid-template-rows 0.4s ease;
+  overflow: hidden;
+}
+
+.faq-answer-inner {
+  /* overflow: hidden no wrapper impede que o conteúdo 'vaze' durante a animação */
+  overflow: hidden;
+  min-height: 0;
+}
+
+.faq-answer {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
